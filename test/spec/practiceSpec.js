@@ -21,7 +21,7 @@ if (isNode()) {
       }
     })
     .forEach(file => {
-      eval(fs.readFileSync(file) + '');
+      global.eval(fs.readFileSync(`${filePath}/${file}`) + '');
     });
 }
 
