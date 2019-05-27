@@ -2,10 +2,16 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      "the 'this' keyword is used for referencing and precision";
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      "Implicit Binding is based on the rules of javascript.";
+      "Explicit Binding it basically overides the normal behavior of the function and 'this' keyword, we use explicit when using bind() function.";
+      "";
+      "";
+
 
   // 3) What does .bind do?
 
