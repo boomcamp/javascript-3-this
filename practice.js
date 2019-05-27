@@ -3,13 +3,21 @@
 
       //Answer
 
+      // 'this' refers to making the object global so that it can be used dynamically
+
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
 
+    //   Implicit Binding - when dot notation is used for invoking a function
+    //   Explicit Binding - when the .call(), .bind(), or .apply() is used
+    //   new binding -    the bind refer to the new object that is declared. like the 'prius and mustang' example below
+    //   Default Binding - this refers to a global object and not using the dot notation or the explicit bindings
+
   // 3) What does .bind do?
 
       //Answer
+      // it creates a new function and when called the 'this' is set to the provided value.
 
 
 //Next Problem
@@ -90,7 +98,9 @@ var userName = getMyUsername.bind(myUser)(); //Fix this
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
-  //'iliketurtles'
+  //iliketurtles - if binded.
+  //undefined - if not yet binded or unfixed 
+  
   
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
