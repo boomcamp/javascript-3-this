@@ -5,10 +5,13 @@
     // 'this keyword' is used as a shortcut for reference of an object. It references the object that is calling it. Based on what I read, it would make the code unambiguous.
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
-
-      //Answer
-
-  // 3) What does .bind do?
+    //Answer
+    // 1. Default binding - The value of the function that is contained in the global scope will be the window object. 
+    // 2. Implicit binding - Using dot to bound an object. The object before the dot is where the this keyworrd will be bound to. It just relying on the DEFAULT behaviour of the javascript.
+    // 3. Explicit Binding - Taking a very concrete action. You can force a function call to use a particular object for this binding, without putting a property function reference on the object. Using functions such as call, apply and bind.
+    // 4. New Binding - 'this keyword' will be bound to the new object being created.
+  
+//3) What does .bind do?
 
       //Answer
 
