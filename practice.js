@@ -36,6 +36,7 @@
     },
   }
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
+user.getUsername();
 
 //Next Problem
 
