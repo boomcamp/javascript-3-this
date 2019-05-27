@@ -6,6 +6,7 @@
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      
 
   // 3) What does .bind do?
 
@@ -20,12 +21,19 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
+    var user = {
+      username: 'username',
+      email: 'email@email',
+      getUsername: function() {
+        return this.username;
+      },
+    };
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
 
 //Next Problem
-
+console.log(user.getUsername());
 
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
 
