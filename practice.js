@@ -99,7 +99,7 @@ var userName = getMyUsername(); //Fix this
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
-  //
+  //getMyUsername properties
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
