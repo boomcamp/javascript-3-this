@@ -94,14 +94,17 @@ var getMyUsername = function() {
 };
 
 var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser);//Fixed code
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
+  //Answer: 'undefined'
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
+  //Answer : The window object.
 
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
