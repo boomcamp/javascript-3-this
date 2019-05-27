@@ -18,14 +18,14 @@
 //Next Problem
 
 //Create an object called user which has the following properties.
-//username --> which is a string
+//username --> which is astring
 //email --> which is a string
 //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
 
 var user = {
-    username: '',
-    email: '',
+    username: 'beastmast64',
+    email: 'beastmaster64',
     getUsername() {
         return this.username;
     }
@@ -75,7 +75,9 @@ var getYear = function() {
 
 
 //Note(no tests)
-//Code Here
+
+var getPriusYear = this.getYear.bind(prius);
+var getMustangYear = this.getYear.bind(mustang);
 
 
 
@@ -91,15 +93,15 @@ var getMyUsername = function() {
     return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
-//Note(no tests)
-//Answer Here
+//The getMyUsername function will return object
+
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
-//Answer Here
+//The this keyword is bounded to the getMyUsername.
 
 
-//Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
+//Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.s b
