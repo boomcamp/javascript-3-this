@@ -75,9 +75,11 @@ var getYear = function(){
 
 
 //Note(no tests)
-  //Code Here
+var getPriusYear = getYear.bind(prius);
+var getMustangYear = getYear.bind(mustang);
 
-
+console.log(getPriusYear);
+console.log(getMustangYear);
 
 //New Problem
 
