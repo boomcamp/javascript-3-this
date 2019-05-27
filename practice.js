@@ -37,15 +37,14 @@
   function Car(brand, model, year, move){
     brand = this.brand;
     model = this.model;
-    year = this.year;
+    year = this.funcyear;
     move = 0;
-    moveCar(){
-      move += 10;
-    }
   }
 
-
-
+  Car.prototype.moveCar = function(){
+   return this.move += 10;
+   
+  }
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 
