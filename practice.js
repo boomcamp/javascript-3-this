@@ -2,15 +2,18 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      'used to refer to an object that the function (where this is used) is bound to';
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      'Implicit binding, explicit binding, new binding and default binding'
       
 
   // 3) What does .bind do?
 
       //Answer
+      "creates a new function that will have 'this' set to the first parameter pass to bind";
 
 
 //Next Problem
@@ -47,13 +50,14 @@ var mustang = new Car('Ford', 'Mustang', 2013);
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
+
 function Car(brand, model, year) {
   this.brand = brand;
   this.model = model;
   this.year = year;
   this.moveCar = function() {
-    var move = 0;
-    return move+= 10;
+    this.move = 0;
+    return this.move+= 10;
   }
 };
 
@@ -70,8 +74,11 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
+  var getPriusYear = getYear.bind(prius)();
+  var getMustangYear = getYear.bind(mustang)();
 
-
+  console.log(getPriusYear);
+  console.log(getMustangYear);
 
 //New Problem
 
@@ -90,7 +97,7 @@ var userName = getMyUsername.bind(myUser)(); //Fix this
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
-  'iliketurtles';
+  'the value of the username property of myUser, which is iliketurtles';
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
