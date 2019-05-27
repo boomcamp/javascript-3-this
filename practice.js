@@ -12,7 +12,7 @@
 
 // 3) What does .bind do?
 
-//Answer
+//.bind creates a new bound function
 
 
 //Next Problem
