@@ -73,7 +73,6 @@ var getYear = function(){
   //Code Here
 
 
-
 //New Problem
 
 var myUser = {
@@ -83,8 +82,7 @@ var myUser = {
 };
 
 var getMyUsername = function() {
- console.log(this);
- return this.username;
+ return myUser.username;
 };
 
 var userName = getMyUsername(); //Fix this
