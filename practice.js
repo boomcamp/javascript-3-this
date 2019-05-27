@@ -2,7 +2,7 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+      "This Keyword is use to make the code umambigous, It refers to the object and also contains the value of the object";
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
@@ -20,9 +20,15 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
+    let user = {
+      username: 'Marvin',
+      email: 'marvin.banton@boom.camp',
+      getUsername: function() {
+        return this.username;
+      }
+    }
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
+    console.log(this.getUsername);
 
 //Next Problem
 
@@ -39,6 +45,7 @@ var mustang = new Car('Ford', 'Mustang', 2013);
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
+    
 
 
 //Continuation of previous problem
