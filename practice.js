@@ -80,6 +80,7 @@ var getYear = function(){
 
 
 
+
 //New Problem
 
 var myUser = {
@@ -92,7 +93,11 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+myUser.getMyUsername = getMyUsername;
+getMyUsername();
+myUser.getMyUsername();
+
+// var userName = getMyUsername(); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
@@ -101,7 +106,7 @@ var userName = getMyUsername(); //Fix this
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
-  //  The 'this keyword' is bound to the myUser object.
+  //  None.
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
   
