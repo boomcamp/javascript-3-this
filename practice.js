@@ -34,43 +34,44 @@
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
 
   //Function Invocations Here
-  function Car(brand, model, year, move){
-    brand = this.brand;
-    model = this.model;
-    year = this.funcyear;
-    move = 0;
-  }
+    function Car(brand, model, year, move){
+      brand = this.brand;
+      model = this.model;
+      year = this.year;
+      move = 0;
+    }
 
-  Car.prototype.moveCar = function(){
-   return this.move += 10;
-   
-  }
-var prius = new Car('Toyota', 'Prius', 2011);
-var mustang = new Car('Ford', 'Mustang', 2013);
+    Car.prototype.moveCar = function(){
+    return this.move += 10;
+    
+    }
+  var prius = new Car('Toyota', 'Prius', 2011);
+  var mustang = new Car('Ford', 'Mustang', 2013);
 
-//Hint, you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10. The move property will be added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
+  //Hint, you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10. The move property will be added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
 
-prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
-mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
+  prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
+  mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
+  //Continuation of previous problem
+  var getYear = function(){
+    return this.year;
+  };
 
-
-//Continuation of previous problem
-
-var getYear = function(){
-  return this.year;
-};
-
-// Above you are given a getYear function.  Use the bind function to bind the prius object to the function and save it in a variable called getPriusYear
-// Then use the bind function to bind the mustang to the function and save it in a varabile called getMustangYear
-// Console Log the results of the getPriusYear and getMustangYear to see that they are returning the correct years.
+  // Above you are given a getYear function.  Use the bind function to bind the prius object to the function and save it in a variable called getPriusYear
+  // Then use the bind function to bind the mustang to the function and save it in a varabile called getMustangYear
+  // Console Log the results of the getPriusYear and getMustangYear to see that they are returning the correct years.
 
 
-//Note(no tests)
-  //Code Here
-
-
-
+  //Note(no tests)
+    //Code Here 
+  var getPriusYear = getYear.bind(prius)();
+  var getMustangYear =  getYear.bind(mustang)();
+  
+  
+  console.log(getPriusYear);
+  console.log(getMustangYear);
+  
 //New Problem
 
 var myUser = {
@@ -83,15 +84,18 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.bind(myUser)(); //Fix this
+
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
+  //'iliketurtles'
+  
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
-
   //Answer Here
+  //myUser
 
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
