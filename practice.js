@@ -2,16 +2,24 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+      /*
+          This works as a reference to the current object that is being invoked on the method or constructor.
+      */
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-
+      /*
+      1) Default binding refers to how this is the global context whenever a function is invoked without any of these other rules.
+      2) Implicit binding occurs when dot notation is used to invoke a function.
+      3) Explicit binding of this occurs when .call(), .apply(), or .bind() are used on a function.
+      4) New Binding has the highest priority
+      */
   // 3) What does .bind do?
 
       //Answer
-
-
+    /*
+    Bind creates a new function that will have this set to the first parameter passed to bind().
+    */
 //Next Problem
 
 //Create an object called user which has the following properties.
@@ -20,6 +28,14 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
+
+    var  user = {
+      username: '',
+      email: '',
+      getUsername(){
+        return this.username;
+      }
+    }
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
@@ -30,6 +46,17 @@
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
 
   //Function Invocations Here
+  function Car(brand, unit, year){
+    this.brand = brand;
+    this.unit = unit;
+    this.year = year;
+    this.move = 0;   
+}
+
+Car.prototype.moveCar = function(){
+  return this.move += 10;
+}i
+
 
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
@@ -56,7 +83,6 @@ var getYear = function(){
   //Code Here
 
 
-
 //New Problem
 
 var myUser = {
@@ -69,16 +95,16 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.bind(myUser)();  //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
-
+  undefined
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
+  'iliketurtles'
 
-
-//Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
+  //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
