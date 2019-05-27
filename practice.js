@@ -7,6 +7,9 @@
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer 
+      //.call()
+      //.bind()
+      //.apply()
 
   // 3) What does .bind do?
 
