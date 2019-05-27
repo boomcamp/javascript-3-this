@@ -2,15 +2,19 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+      // used to refer an object
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      // Implicit Binding
+      // Explicit Binding
+      // new Binding
+      // default binding
 
   // 3) What does .bind do?
 
       //Answer
-
+      // It allows us to place the this value on methods
 
 //Next Problem
 
