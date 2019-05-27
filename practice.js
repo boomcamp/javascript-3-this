@@ -13,7 +13,8 @@
   
 //3) What does .bind do?
 
-      //Answer
+    //Answer
+    //It creates a new function that will have 'this' set to first parameter passed to bind().
 
 
 //Next Problem
