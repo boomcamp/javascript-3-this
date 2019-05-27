@@ -56,7 +56,6 @@ function Car(brand, model, year){
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
-
 //Continuation of previous problem
 
 var getYear = function(){
@@ -70,7 +69,8 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
-
+  var getPriusYear = getYear.bind(prius)();
+  var getMustangYear = getYear.bind(mustang)();
 //New Problem
 
 var myUser = {
