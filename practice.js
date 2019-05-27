@@ -34,7 +34,6 @@
     }
   }
 
-
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
 user.getUsername();
@@ -78,8 +77,11 @@ var getYear = function(){
 
 //Note(no tests)
 
+getPriusYear = getYear.bind (this.getPriusYear);
+getMustangYear = getYear.bind (this.getMustangYear);
 
-
+console.log(getPriusYear);
+console.log(getMustangYear);
 
 //New Problem
 
@@ -113,4 +115,3 @@ myUser.getMyUsername();
   //  myUser.getMyUsername = getMyUsername;
   //  getMyUsername();
   //  myUser.getMyUsername();
-
