@@ -20,16 +20,31 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
+  var user = {
+    username: 'martin.raquion',
+    email: 'martin.raquion@boom.camp',
+    getUsername(){
+      return this.username;
+    },
+  }
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
-
 //Next Problem
-
 
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
 
   //Function Invocations Here
+  function Car(brand, model, year, move){
+    brand = this.brand;
+    model = this.model;
+    year = this.year;
+    move = 0;
+    moveCar(){
+      move += 10;
+    }
+  }
+
+
 
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
