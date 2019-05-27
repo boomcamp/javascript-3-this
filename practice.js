@@ -2,15 +2,15 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-
+      "It is used as a shortcut. Refers to an object, that object which is executing the current bit of javascript code"
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-
+      "Implicit, Explicit, New and Default"
   // 3) What does .bind do?
 
       //Answer
-
+      "Calls a function with the 'this' value set explicitly. It sets which specific object will be bound to 'this' when the function/method is invoked"
 
 //Next Problem
 
@@ -20,9 +20,8 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
-
+    
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-
 
 //Next Problem
 
@@ -40,7 +39,6 @@ prius.moveCar(); //increments prius' move property by 10. Returns the new move p
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
 
-
 //Continuation of previous problem
 
 var getYear = function(){
@@ -54,8 +52,6 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
-
-
 
 //New Problem
 
@@ -78,7 +74,6 @@ var userName = getMyUsername(); //Fix this
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
-
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
