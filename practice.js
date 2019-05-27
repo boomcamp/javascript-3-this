@@ -40,12 +40,21 @@ console.log(user.getUsername());
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 
-//Hint, you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10. The move property will be added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
+//Hint, you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10. 
+//The move property will be added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in 
+//order to make sure you're invoking moveCar on the right object (prius vs mustang).
 
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
+//Car.prototype.moveCar =
 
+function Car(brand, name, year){
+  this.brand = brand;
+  this.name = name;
+  this.year = year;
+  this.move = 0;
+}
 
 //Continuation of previous problem
 
@@ -72,6 +81,7 @@ var myUser = {
 };
 
 var getMyUsername = function() {
+ console.log(this);
  return this.username;
 };
 
@@ -80,11 +90,11 @@ var userName = getMyUsername(); //Fix this
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
-
+  //undefined function
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
-
+  //
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
