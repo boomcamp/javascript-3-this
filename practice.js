@@ -16,6 +16,7 @@
   // 3) What does .bind do?
 
       //Answer
+      "Bind creates a new function that will have 'this' set to the first parameter passed to bind()";
 
 
 //Next Problem
