@@ -12,7 +12,7 @@
          3. Default Binding
             - happens when dot notation or explicit binding are not used to call a function. 'This' keyword becomes global object here.
          4. New Binding
-            - 
+            - Uses a constructor function with the new keyword to build a new instance.
       
       */
 
@@ -111,7 +111,7 @@ userName;
 
   //Answer Here
 
-//undefined
+//Window
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
