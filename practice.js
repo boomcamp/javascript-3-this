@@ -53,7 +53,16 @@ var mustang = new Car('Ford', 'Mustang', 2013);
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
 
+function Car(brand,name,year){
+  this.brand = brand;
+  this.name = name;
+  this.year = year;
+  this.move = 0;
+  this.moveCar = function(){
+   return this.move+=10;
+  }
 
+}
 
 //Continuation of previous problem
 
@@ -68,7 +77,10 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
+var getPriusYear = getYear.bind(prius);
+var getMustangYear = getYear.bind(mustang);
 
+console.log(`Prius Year: ${getPriusYear}, Mustang Year: ${getMustangYear}`)
 
 
 //New Problem
@@ -83,7 +95,7 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.bind(myUser)(); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
