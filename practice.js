@@ -19,12 +19,20 @@
   //email --> which is a string
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
-    //Code Here
+  var user = {
+    username: 'judesama',
+    email: 'jude.agagad@boom.camp',
+    
+    getUsername(){
+      return this.username;
+    }
+    
+  }
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
 
-//Next Problem
+user.getUsername();
 
 
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
@@ -81,4 +89,3 @@ var userName = getMyUsername(); //Fix this
 
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
-
