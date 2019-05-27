@@ -1,7 +1,8 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
-      //Answer
+    // Answer
+    // 'this keyword' is used as a shortcut for reference of an object. It references the object that is calling it. Based on what I read, it would make the code unambiguous.
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
