@@ -46,6 +46,10 @@ function Car(brand, model, year) {
     this.model = model;
     this.year = year;
     this.move = 0;
+    this.moveCar = function() {
+        this.move = this.move + 10;
+        return this.move;
+    }
 }
 
 var prius = new Car('Toyota', 'Prius', 2011);
@@ -92,10 +96,11 @@ var myUser = {
 var getMyUsername = function() {
     return this.username;
 };
-
 var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
+
+
 //The getMyUsername function will return object
 
 
