@@ -34,6 +34,7 @@
 
 
 //Next Problem
+console.log(user.getUsername());
 
 
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
