@@ -11,7 +11,7 @@
         "Default Binding: refers to how this is the global context whenever a function is invoked without any of other rules."
   // 3) What does .bind do?
 
-      "Bind creates new function tha will have  set to the fist parameter pasd to bind() or you can invoke at a later time"
+      "Bind creates new function that will have set to the fist parameter pasd to bind() or you can invoke at a later time"
 
 
 //Next Problem
@@ -49,8 +49,8 @@ function Car (brand, model, year, move){
 };
 
 
-var prius = new Car('Toyota', 'Prius', 2011, 0);
-var mustang = new Car('Ford', 'Mustang', 2013, 0);
+var prius = new Car('Toyota', 'Prius', 2011);
+var mustang = new Car('Ford', 'Mustang', 2013);
 
 //Hint, you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10. 
 //The move property will be added to every object that is being returned from the Car function. 
@@ -100,7 +100,7 @@ var userName = getMyUsername.bind(myUser)();
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
-"iliketurtles"
+"undefined"
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
