@@ -89,12 +89,11 @@ var getMyUsername = function() {
    return this.username;
 };
 
-var userName = getMyUsername.bind(myUser); //Fix this
-userName = userName();
+var userName = getMyUsername.bind(myUser)(); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
-"iliketurtles"
+"undefined"
 
 // //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
