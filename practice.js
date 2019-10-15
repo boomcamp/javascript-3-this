@@ -1,18 +1,18 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
 // 1) What is the purpose of the 'this keyword'?
 
-"It references the object that is excecuting the current function."
+//It references the object that is excecuting the current function.
 
 // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
-"Implicit binding = it occurs when dot notation is used to invoke a function"
-"Explicit binding = occurs when .call(), .apply(), or .bind() are used on a function."
-"New binding = it references the new object that the interpretor created."
-"Default binding = refers to how this is the global context whenever a function is invoked without any of these other rules"
+/* Implicit binding = it occurs when dot notation is used to invoke a function
+Explicit binding = occurs when .call(), .apply(), or .bind() are used on a function.
+New binding = it references the new object that the interpretor created.
+Default binding = refers to how this is the global context whenever a function is invoked without any of these other rules */
 
 // 3) What does .bind do?
 
-"It creates a new function that will have 'this' set to the first parameter passed to bind"
+//It creates a new function that will have 'this' set to the first parameter passed to bind
 
 //Next Problem
 
@@ -93,10 +93,10 @@ var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
-"undefined"
+//undefined
 
 // //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
-"the global window object"
+//the global window object
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
