@@ -2,18 +2,18 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
-      "a shortcut or a way to reference to properties in object"
+//       "a shortcut or a way to reference to properties in object"
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
-      "1) Default binding refers to how this is the global context whenever a function is invoked without any of these other rules."
-      "2) Implicit binding occurs when dot notation is used to invoke a function."
-      "3) Explicit binding of this occurs when .call(), .apply(), or .bind() are used on a function."
-      "4) New Binding has the highest priority"
+//       "1) Default binding refers to how this is the global context whenever a function is invoked without any of these other rules."
+//       "2) Implicit binding occurs when dot notation is used to invoke a function."
+//       "3) Explicit binding of this occurs when .call(), .apply(), or .bind() are used on a function."
+//       "4) New Binding has the highest priority"
   // 3) What does .bind do?
 
       //Answer
-      "creates new function"
+//       "creates new function"
 
 //Next Problem
 
@@ -96,11 +96,11 @@ var userName = getMyUsername.bind(myUser)();//Fix this
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
-  "undefined function"
+//   "undefined function"
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
-'global window object'
+// 'global window object'
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 userName();
