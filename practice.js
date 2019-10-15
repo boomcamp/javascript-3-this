@@ -1,21 +1,21 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
-      "`this` keyword is used to refer to the value of the object inside a function whenever it is invoked. When inside the function,"
-      "it also refers to the value of the windows object whenever a variable is globally declared outside the function."
+      //`this` keyword is used to refer to the value of the object inside a function whenever it is invoked. When inside the function,
+      //it also refers to the value of the windows object whenever a variable is globally declared outside the function.
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
-      "Global binding -    this refers to window object or when a function is globally described, `this` keyword inside this function refers to the globla object hence, window object"
-      "Explicit Binding -  `call` method pass an explicit reference for the `this` keyword hence, explicit binding. Explicit bindings can also be set using the `apply` method. Hard binding                      is available in the form of the `bind` method."
-      "Implicit Binding -  when a function is globally described and contained inside one of the property/key inside an Object, this property inside an Object is called Implicit Binding."
-      "New Binding -       creates an object and assign it to another object. If the new object is invoked, it is also equivalent to `.this` keyword"
+      //Global binding -    this refers to window object or when a function is globally described, `this` keyword inside this function refers to the globla object hence, window object
+      //Explicit Binding -  `call` method pass an explicit reference for the `this` keyword hence, explicit binding. Explicit bindings can also be set using the `apply` method. Hard                              binding is available in the form of the `bind` method.
+      //Implicit Binding -  when a function is globally described and contained inside one of the property/key inside an Object, this property inside an Object is called Implicit Binding.
+      //New Binding -       creates an object and assign it to another object. If the new object is invoked, it is also equivalent to `.this` keyword
 
   // 3) What does .bind do?
 
-      "`.bind()` method is a function that calls all properties in an object."
-      "The value inside the .bind() method is also equivalent to a value that has `this` keyword."
-      "Before the `.bind()` method is/are the value/s that select which property/ies to be called in an object."
+      //`.bind()` method is a function that calls all properties in an object.
+      //The value inside the .bind() method is also equivalent to a value that has `this` keyword.
+      //Before the `.bind()` method is/are the value/s that select which property/ies to be called in an object.
 
 
 //Next Problem
