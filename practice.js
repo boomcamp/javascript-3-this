@@ -3,13 +3,25 @@
 
       //Answer
 
+      // The JavaScript this keyword refers to the object it belongs to. It has different values depending on where it is used
+
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
 
+     // Is the function called by new?
+     // Is the function called by call(), apply(), or bind()?
+     // Is the function called as a method, ie: obj.func()?
+     // Is the function called in the global scope?
+
+     // If strict mode is enabled, return undefined.
+     // Otherwise, return the global object, ie: window.
+
   // 3) What does .bind do?
 
       //Answer
+
+     // Bind creates a new function that will have this set to the first parameter passed to bind()
 
 
 //Next Problem
@@ -21,8 +33,17 @@
 
     //Code Here
 
+    var user  = {
+      username: "ham8243",
+      email: "hamlet.delosreyes@boom.camp",
+      getUsername: function (){
+        return this.username;
+      }
+    };
+
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
+user.getUsername();
 
 //Next Problem
 
@@ -30,6 +51,16 @@
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
 
   //Function Invocations Here
+  function Car(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+
+    this.moveCar = function(){
+      this.move+=10
+      return this.move
+    }
+  }
 
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
@@ -55,7 +86,11 @@ var getYear = function(){
 //Note(no tests)
   //Code Here
 
+  var getMustangYear = getYear.bind(mustang)
+  var getPriusYear = getYear.bind(prius)
 
+  console.log(getMustangYear())
+  console.log(getPriusYear())
 
 //New Problem
 
@@ -69,16 +104,19 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
   //Answer Here
 
+  //undefined
+
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
 
+  //myUser
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
