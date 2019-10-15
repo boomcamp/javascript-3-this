@@ -1,17 +1,18 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
-      "Shorthand way to reference a variable"
+    //  "Shorthand way to reference a variable"
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
         
-        "Implicit Binding: binding this based on the rules of javascript or the JS interpreter."
-        "Explicit Binding: explicitly set the context of this or the value of this using call, apply or bind"
-        "New Binding: invoking a function using new keyword. JS interpretor will create a brand new object and call this"
-        "Default Binding: refers to how this is the global context whenever a function is invoked without any of other rules."
-  // 3) What does .bind do?
+//         "Implicit Binding: binding this based on the rules of javascript or the JS interpreter."
+//         "Explicit Binding: explicitly set the context of this or the value of this using call, apply or bind"
+//         "New Binding: invoking a function using new keyword. JS interpretor will create a brand new object and call this"
+//         "Default Binding: refers to how this is the global context whenever a function is invoked without any of other rules."
+ 
+// 3) What does .bind do?
 
-      "Bind creates new function that will have set to the fist parameter pasd to bind() or you can invoke at a later time"
+//       "Bind creates new function that will have set to the fist parameter pasd to bind() or you can invoke at a later time"
 
 
 //Next Problem
@@ -104,8 +105,7 @@ var userName = getMyUsername.call(myUser);
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
   //Answer Here
- "global window object"
+"global window object"
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
 
-// var userName = getMyUsername.bind(myUser)();
