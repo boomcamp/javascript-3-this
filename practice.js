@@ -46,7 +46,7 @@ user.getUsername();
       return this.move += 10;
     }
   }
-
+    
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 
