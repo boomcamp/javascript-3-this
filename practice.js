@@ -7,7 +7,7 @@
 
       //Answer
      // Default binding
-       // Implicit 
+       // Implicit binding
       // Explicit binding 
       // New binding
   // 3) What does .bind do?
