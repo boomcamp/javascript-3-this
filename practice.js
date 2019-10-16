@@ -9,7 +9,7 @@
 
   // 3) What does .bind do?
 
-      //creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+      //.bind creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
 
 //Next Problem
@@ -113,7 +113,7 @@ var myUser = {
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
-  //the 'iliketurtles' username
+  //undifined
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
