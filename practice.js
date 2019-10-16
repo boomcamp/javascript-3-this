@@ -48,9 +48,9 @@ function Car(brand, model ,year){
   this.brand = brand;
   this.model = model;
   this. year = year;
-  this.move  = 1;
+  this.move  = 10;
   this.moveCar = function() {
-    return this.move
+    return  this.move
  }
 }
 
@@ -75,8 +75,10 @@ var getYear = function(){
 //Note(no tests)
   //Code Here
     
-  var getPriusYear = getYear.bind(prius, mustang);
-
+  const getPriusYear = getYear.bind(prius);
+  const getMustangYear = getYear.bind(mustang);
+  console.log(getPriusYear())
+  console.log(getMustangYear())
     
   
 //New Problem
