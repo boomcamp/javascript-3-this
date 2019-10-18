@@ -1,3 +1,5 @@
+// IMPORTANT NOTE: use var for declaring variables
+
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
