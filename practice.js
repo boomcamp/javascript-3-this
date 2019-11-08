@@ -3,15 +3,21 @@
 //We're in a job interview. Answer the following questions (try to not look at your notes unless you have to).
   // 1) What is the purpose of the 'this keyword'?
 
-      //Answer
+      //`this` keyword is used to refer to the value of the object inside a function whenever it is invoked. When inside the function,
+      //it also refers to the value of the windows object whenever a variable is globally declared outside the function.
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
-      //Answer
+      //Global binding -    this refers to window object or when a function is globally described, `this` keyword inside this function refers to the globla object hence, window object
+      //Explicit Binding -  `call` method pass an explicit reference for the `this` keyword hence, explicit binding. Explicit bindings can also be set using the `apply` method. Hard                              binding is available in the form of the `bind` method.
+      //Implicit Binding -  when a function is globally described and contained inside one of the property/key inside an Object, this property inside an Object is called Implicit Binding.
+      //New Binding -       creates an object and assign it to another object. If the new object is invoked, it is also equivalent to `.this` keyword
 
   // 3) What does .bind do?
 
-      //Answer
+      //`.bind()` method is a function that calls all properties in an object.
+      //The value inside the .bind() method is also equivalent to a value that has `this` keyword.
+      //Before the `.bind()` method is/are the value/s that select which property/ies to be called in an object.
 
 
 //Next Problem
@@ -23,8 +29,17 @@
 
     //Code Here
 
+user = {
+  username: 'franco',
+  email: 'francisco.ifurung@boom.camp',
+  getUsername: function() {
+    return this.username;
+  }
+}
+
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
+user.getUsername();
 
 //Next Problem
 
@@ -32,11 +47,23 @@
 // Write a constructor function, including method definitions, which will make the following function invocations function properly.
 
   //Function Invocations Here
+function Car(type, model, year){
+  this.type = type;
+  this.model = model;
+  this.year = year;
+  this.move = 0;
+}
+
+Car.prototype.moveCar = function(){
+  this.move  += 10;
+  return this.move;
+}
 
 var prius = new Car('Toyota', 'Prius', 2011);
 var mustang = new Car('Ford', 'Mustang', 2013);
 
 //Hint, you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10. The move property will be added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
+
 
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
@@ -57,10 +84,13 @@ var getYear = function(){
 //Note(no tests)
   //Code Here
 
+var getPriusYear = getYear.bind(prius);
+var getMustangYear = getYear.bind(mustang);
 
+console.log(getPriusYear());
+console.log(getMustangYear());
 
 //New Problem
-
 var myUser = {
  username: 'iliketurtles',
  age: 13,
@@ -75,12 +105,16 @@ var userName = getMyUsername(); //Fix this
 
 //Above you're given an object, and  a function. What will the getMyUsername function return?
 //Note(no tests)
-  //Answer Here
+  undefined
 
 //In the example above, what is the 'this keyword' bound to when getMyUsername runs?
 
-  //Answer Here
+  "windows.username or global var username"
 
 
 //Fix the getMyUsername invocation (stored in the userName variable, at the bottom of the above code) so that userName will be equal to 'iliketurtles'.
-
+var getMyUsername = function() {
+  return this.username;
+ };
+ 
+var userName = getMyUsername.call(myUser);
